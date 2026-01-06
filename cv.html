@@ -1,49 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Mohammad | Computer Engineer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f7f7f7;
-    color:#222;
-    line-height:1.6;
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #1f2933;
+  line-height: 1.7;
 }
 .container {
-    max-width:900px;
-    background:#fff;
-    margin:40px auto;
-    padding:40px;
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
-h1 {
-    font-size:32px;
-    margin-bottom:5px;
+header {
+  text-align: center;
+  margin-bottom: 50px;
 }
-h2 {
-    font-size:20px;
-    margin-top:30px;
-    border-bottom:2px solid #ddd;
-    padding-bottom:5px;
+header h1 {
+  font-size: 38px;
+  font-weight: 700;
 }
-.subtitle {
-    color:#555;
-    font-size:16px;
+header p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
 }
 .section {
-    margin-top:20px;
+  margin-top: 45px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
 }
 ul {
-    padding-left:20px;
+  padding-left: 20px;
 }
 li {
-    margin-bottom:8px;
+  margin-bottom: 10px;
 }
 .contact {
-    margin-top:10px;
-    font-size:14px;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #444;
+}
+.contact a {
+  color: #2563eb;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 30px;
+  border-left: 2px solid #e5e7eb;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 35px;
+  padding-left: 20px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+.timeline-date {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 600;
+}
+.timeline-item h3 {
+  margin-top: 5px;
+  font-size: 18px;
+}
+.timeline-item p {
+  margin-top: 6px;
+  color: #444;
+  font-size: 15px;
 }
 </style>
 </head>
@@ -51,62 +116,112 @@ li {
 <body>
 <div class="container">
 
-<!-- HEADER -->
-<h1>Mohammad</h1>
-<p class="subtitle">Computer Engineer | Software & Web Developer</p>
-<p class="contact">
-📧 Email: your@email.com |
-🌍 Portfolio: yoursite.com |
-💼 GitHub: github.com/username
-</p>
+<header>
+  <h1>Mohammad</h1>
+  <p>Computer Engineer | Software & Web Developer</p>
+  <div class="contact">
+    📧 your@email.com · 💼 github.com/username · 🌐 portfolio website
+  </div>
+</header>
 
-<!-- SUMMARY -->
-<h2>Professional Summary</h2>
-<p>
-Computer Engineer with a strong interest in software and web development.
-Focused on building reliable, clean and efficient solutions.
-Motivated, fast learner and comfortable working in professional team environments.
-</p>
+<section class="section">
+  <h2>Professional Summary</h2>
+  <p>
+    Computer Engineer with a strong interest in software and web development.
+    Focused on building clean, efficient and scalable solutions.
+    Motivated self-learner with the ability to adapt quickly in professional environments.
+  </p>
+</section>
 
-<!-- SKILLS -->
-<h2>Technical Skills</h2>
-<ul>
-    <li>Programming: HTML, CSS, JavaScript, Python</li>
-    <li>Web Development: Responsive Design, UI Fundamentals</li>
-    <li>Databases: SQL (Basic)</li>
+<section class="section">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li>Languages: HTML, CSS, JavaScript, Python</li>
+    <li>Web: Responsive Design, UI Fundamentals</li>
     <li>Tools: Git, GitHub</li>
-</ul>
+    <li>Databases: SQL (Basic)</li>
+  </ul>
+</section>
 
-<!-- EXPERIENCE / PROJECTS -->
-<h2>Projects & Experience</h2>
-<ul>
+<section class="section">
+  <h2>Projects</h2>
+  <ul>
     <li>
-        <strong>Personal Portfolio Website</strong> – Designed and developed a responsive personal website showcasing resume, certificates and projects.
+      <strong>Personal Portfolio & CV Website</strong>  
+      – Designed and developed a responsive personal website to present skills, resume and projects.
     </li>
     <li>
-        <strong>Practice Web Projects</strong> – Implemented small web applications to improve frontend and programming skills.
+      <strong>Practice Web Applications</strong>  
+      – Built small frontend projects to strengthen programming and UI skills.
     </li>
-</ul>
+  </ul>
+</section>
 
-<!-- EDUCATION -->
-<h2>Education</h2>
-<ul>
-    <li>Bachelor / Background in Computer Engineering</li>
-</ul>
+<section class="section">
+  <h2>Professional Timeline</h2>
 
-<!-- CERTIFICATES -->
-<h2>Certificates</h2>
-<ul>
-    <li>Programming & IT related certificates</li>
-</ul>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-date">2025 – Present</span>
+      <h3>Web & Software Development</h3>
+      <p>
+        Building responsive websites and software projects with a focus on clean code,
+        usability and modern development practices.
+      </p>
+    </div>
 
-<!-- LANGUAGES -->
-<h2>Languages</h2>
-<ul>
+    <div class="timeline-item">
+      <span class="timeline-date">2024</span>
+      <h3>Frontend Practice Projects</h3>
+      <p>
+        Developed multiple small-scale web applications to strengthen JavaScript,
+        layout design and responsive UI skills.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">2023</span>
+      <h3>Computer Engineering Background</h3>
+      <p>
+        Gained foundational knowledge in programming, algorithms and software concepts.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Education</h2>
+  <ul>
+    <li>Background in Computer Engineering</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Languages</h2>
+  <ul>
     <li>Persian – Native</li>
-    <li>English – Intermediate / Professional Working Level</li>
-</ul>
+    <li>English – Professional Working Proficiency</li>
+  </ul>
+</section>
+
+<footer>
+  © 2026 Mohammad · Computer Engineer
+</footer>
 
 </div>
+
+<script>
+const sections = document.querySelectorAll('.section');
+const reveal = () => {
+  const trigger = window.innerHeight * 0.85;
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < trigger) sec.classList.add('visible');
+  });
+};
+window.addEventListener('scroll', reveal);
+reveal();
+</script>
+
 </body>
 </html>
